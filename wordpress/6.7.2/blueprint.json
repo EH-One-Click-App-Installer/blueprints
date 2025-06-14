@@ -1,0 +1,38 @@
+{
+    "version": "6.7.2",
+    "name": "wordpress",
+    "description": "WordPress is a content management system (CMS) that allows you to host and build websites. It is open-source software, which means it is free to use and modify.",
+    "icon": "https://www.wordpress.org/favicon.ico",
+    "homepage": "https://wordpress.org",
+    "documentation": "https://wordpress.org/support/",
+    "blueprint": "wordpress",
+    "cmdSteps": [
+        {
+            "title": "Download WordPress",
+            "command": "wp core download --version=6.7.2 --force"
+        },
+        {
+            "title": "Configure WordPress",
+            "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=localhost"
+        },
+        {
+            "title": "Install WordPress",
+            "command": "wp core install --url=http://{{DOMAIN}} --title={{DOMAIN}} --admin_user={{ADMIN_USER}} --admin_password={{ADMIN_PASS}} --admin_email={{ADMIN_EMAIL}} --skip-email"
+        },
+        {
+            "title": "Install and activate plugins",
+            "command": [
+                "wp plugin install wordfence --activate",
+                "wp plugin install wordpress-seo --activate"
+            ]
+        },
+        {
+            "title": "Set permalink structure",
+            "command": "wp option update permalink_structure '/%postname%/'"
+        },
+        {
+            "title": "Flush rewrite rules",
+            "command": "wp rewrite flush --hard"
+        }
+    ]
+}
