@@ -9,11 +9,11 @@
   "cmdSteps": [
     {
       "title": "Download WordPress",
-      "command": "wp core download --version=6.8.1 --force"
+      "command": "wp core download --version=6.8.1 --force --allow-root"
     },
     {
       "title": "Configure WordPress",
-      "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=localhost"
+      "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=mysql-db.server"
     },
     {
       "title": "Install WordPress",
