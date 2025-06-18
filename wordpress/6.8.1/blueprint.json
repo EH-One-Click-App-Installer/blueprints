@@ -13,27 +13,27 @@
     },
     {
       "title": "Configure WordPress",
-      "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=mysql-db.server"
+      "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=mysql-db.server --allow-root"
     },
     {
       "title": "Install WordPress",
-      "command": "wp core install --url=http://{{DOMAIN}} --title={{SITE_TITLE}} --admin_user={{ADMIN_USER}} --admin_password={{ADMIN_PASS}} --admin_email={{ADMIN_EMAIL}} --skip-email"
+      "command": "wp core install --url=http://{{DOMAIN}} --title={{SITE_TITLE}} --admin_user={{ADMIN_USER}} --admin_password={{ADMIN_PASS}} --admin_email={{ADMIN_EMAIL}} --skip-email --allow-root"
     },
     {
       "title": "Install and activate wordfence",
-      "command": "wp plugin install wordfence --activate"
+      "command": "wp plugin install wordfence --activate --allow-root"
     },
     {
       "title": "Install and activate wordpress-seo",
-      "command": "wp plugin install wordpress-seo --activate"
+      "command": "wp plugin install wordpress-seo --activate --allow-root"
     },
     {
       "title": "Set permalink structure",
-      "command": "wp option update permalink_structure '/%postname%/'"
+      "command": "wp option update permalink_structure '/%postname%/' --allow-root"
     },
     {
       "title": "Flush rewrite rules",
-      "command": "wp rewrite flush --hard"
+      "command": "wp rewrite flush --hard --allow-root"
     }
   ]
 }
