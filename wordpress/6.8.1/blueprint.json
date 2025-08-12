@@ -9,31 +9,31 @@
   "cmdSteps": [
     {
       "title": "Download WordPress",
-      "command": "wp core download --version=6.8.1 --force --allow-root"
+      "command": "wp core download --version=6.8.1 --force"
     },
     {
       "title": "Configure WordPress",
-      "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=mysql-db.server --allow-root"
+      "command": "wp config create --dbname={{DB_NAME}} --dbuser={{DB_USER}} --dbpass={{DB_PASS}} --dbhost=mysql-db.server"
     },
     {
       "title": "Install WordPress",
-      "command": "wp core install --url=http://{{DOMAIN}} --title=\"{{SITE_TITLE}}\" --admin_user={{ADMIN_USER}} --admin_password={{ADMIN_PASS}} --admin_email={{ADMIN_EMAIL}} --skip-email --allow-root"
+      "command": "wp core install --url=http://{{DOMAIN}} --title=\"{{SITE_TITLE}}\" --admin_user={{ADMIN_USER}} --admin_password={{ADMIN_PASS}} --admin_email={{ADMIN_EMAIL}} --skip-email"
     },
     {
       "title": "Install and activate wordfence",
-      "command": "wp plugin install wordfence --activate --allow-root"
+      "command": "wp plugin install wordfence --activate"
     },
     {
       "title": "Install and activate wordpress-seo",
-      "command": "wp plugin install wordpress-seo --activate --allow-root"
+      "command": "wp plugin install wordpress-seo --activate"
     },
     {
       "title": "Set permalink structure",
-      "command": "wp option update permalink_structure '/%postname%/' --allow-root"
+      "command": "wp option update permalink_structure '/%postname%/'"
     },
     {
       "title": "Flush rewrite rules",
-      "command": "wp rewrite flush --hard --allow-root"
+      "command": "wp rewrite flush --hard"
     }
   ]
 }
