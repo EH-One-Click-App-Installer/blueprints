@@ -17,7 +17,7 @@
     },
     {
       "title": "Install WordPress",
-      "command": "wp core install --url=https://{{DOMAIN}} --title=\"{{SITE_TITLE}}\" --admin_user={{ADMIN_USER}} --admin_password="$ADMIN_PASS" --admin_email={{ADMIN_EMAIL}} --skip-email"
+      "command": "wp core install --url=https://{{DOMAIN}} --title=\"{{SITE_TITLE}}\" --admin_user={{ADMIN_USER}} --admin_password=\"$ADMIN_PASS\" --admin_email={{ADMIN_EMAIL}} --skip-email"
     },
     {
       "title": "Install and activate wordfence",
