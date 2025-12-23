@@ -1,7 +1,7 @@
 [
   {
     "name": "wordpress",
-    "versions": ["6.8.2", "6.8.1", "6.7.2", "6.6.2", "6.5.5"],
+    "versions": ["6.9", "6.8.2"],
     "description": "WordPress is a content management system (CMS) that allows you to host and build websites. It is open-source software, which means it is free to use and modify.",
     "icon": "https://www.wordpress.org/favicon.ico",
     "homepage": "https://wordpress.org",

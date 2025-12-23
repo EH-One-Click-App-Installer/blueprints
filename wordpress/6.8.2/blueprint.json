@@ -6,6 +6,7 @@
   "homepage": "https://wordpress.org",
   "documentation": "https://wordpress.org/support/",
   "blueprint": "wordpress",
+  "php": "8.0",
   "cmdSteps": [
     {
       "title": "Download WordPress",

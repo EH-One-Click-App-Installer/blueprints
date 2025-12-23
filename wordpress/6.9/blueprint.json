@@ -1,15 +1,16 @@
 {
-  "version": "6.8.1",
+  "version": "6.9",
   "name": "wordpress",
   "description": "WordPress is a content management system (CMS) that allows you to host and build websites. It is open-source software, which means it is free to use and modify.",
   "icon": "https://www.wordpress.org/favicon.ico",
   "homepage": "https://wordpress.org",
   "documentation": "https://wordpress.org/support/",
   "blueprint": "wordpress",
+  "php": "8.3,8.4",
   "cmdSteps": [
     {
       "title": "Download WordPress",
-      "command": "wp core download --version=6.8.1 --force"
+      "command": "wp core download --version=6.9 --force"
     },
     {
       "title": "Configure WordPress",
